@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-pure-white: #FFFFFF;
+  --color-off-white: #F5F5F5;
+  --color-near-black: #111111;
+  --color-bmw-blue: #0066FF;
+  --color-bmw-blue-dark: #0048C9;
+  --color-bmw-red: #CC0000;
+  --color-mid-gray: #666666;
+  --color-light-gray: #AAAAAA;
+  --color-border: #E5E5E5;
+  --font-orbitron: 'Orbitron', monospace;
+  --font-rajdhani: 'Rajdhani', sans-serif;
+}
+
+:root {
+  --font-orbitron: 'Orbitron', monospace;
+  --font-rajdhani: 'Rajdhani', sans-serif;
+}
+
+html {
+  scroll-behavior: auto;
+  background-color: #FFFFFF;
+  color: #111111;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #111111;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+/* Custom Selection */
+::selection {
+  background-color: #CC0000;
+  color: #FFFFFF;
+}
+
+::-moz-selection {
+  background-color: #CC0000;
+  color: #FFFFFF;
+}
+
+/* Custom Precision Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0066FF;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0048C9;
+}
+
+/* Utility Font Helpers */
+.font-orbitron {
+  font-family: var(--font-orbitron), 'Orbitron', monospace;
+}
+
+.font-rajdhani {
+  font-family: var(--font-rajdhani), 'Rajdhani', sans-serif;
+}
+
+/* Motorsport Scanline Grid Overlay (Subtle White/Gray HUD) */
+.hud-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(0, 102, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 102, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.hud-corner-tl {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid #CC0000;
+  border-left: 2px solid #CC0000;
+}
+
+.hud-corner-tr {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid #0066FF;
+  border-right: 2px solid #0066FF;
+}
+
+.hud-corner-bl {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  width: 12px;
+  height: 12px;
+  border-bottom: 2px solid #0066FF;
+  border-left: 2px solid #0066FF;
+}
+
+.hud-corner-br {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 12px;
+  height: 12px;
+  border-bottom: 2px solid #CC0000;
+  border-right: 2px solid #CC0000;
+}
